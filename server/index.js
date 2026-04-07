@@ -58,7 +58,7 @@ app.use('/api/v1/ai', chatBotRoutes);
 
 
 // get port and start server
-const PORT = process.env.PORT;
+const PORT = process.env.PORT|| 5000;
 app.listen(PORT, () => console.log(`server started at ${PORT}`)) 
 
 // testing route
