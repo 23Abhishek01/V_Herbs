@@ -35,15 +35,19 @@ app.use(fileUpload({
     useTempFiles: true,
     tempFileDir: '/tmp/'
 }));
+const cors = require("cors");
+
 app.use(
-  cors({
-    // "*" ki jagah apna exact Vercel link dalo jo console mein dikh raha hai
-    origin: "https://v-herbs-three.vercel.app", 
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
+    cors({
+        origin: "https://v-herbs-three.vercel.app", // Console mein jo link hai wahi exact
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        credentials: true,
+        allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+    })
 );
+
+// Ye niche wali 2 lines zaroor add karna (Pre-flight request fix)
+app.options("*", cors());
 
 
 // routes mapping
