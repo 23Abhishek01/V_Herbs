@@ -58,8 +58,8 @@ const Herbs = () => {
           {
             // herbs count skeleton 
             loading ? (
-                <div class='text-center text-2xl uppercase font-semibold tracking-widest animate-pulse'>
-                  <p class='h-6 bg-gray-200 rounded w-32 mx-auto'></p>
+                <div className='text-center text-2xl uppercase font-semibold tracking-widest animate-pulse'>
+                  <p className='h-6 bg-gray-200 rounded w-32 mx-auto'></p>
                 </div>
             ) : (
               // herbs count
