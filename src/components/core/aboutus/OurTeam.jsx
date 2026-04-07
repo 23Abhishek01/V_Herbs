@@ -7,7 +7,7 @@ import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 // images
-import team_member_1 from '../../../assets/about/Pradeep.png'
+import team_member_1 from '../../../assets/about/1.png'
 import team_member_2 from '../../../assets/about/member2.png'
 import team_member_4 from '../../../assets/about/member4.png'
 import team_member_3 from '../../../assets/about/member3.png'
@@ -16,11 +16,11 @@ import team_member_3 from '../../../assets/about/member3.png'
 const teamMembersDetails = [
     {
         id: 1,
-        name: 'Pradeep Singh',
+        name: 'Abhishek Dabral',
         photo: team_member_1,
         role: 'Project Lead',
-        linkedInLink: 'https://www.linkedin.com/in/pradeep-singh-b300362b3/',
-        instagramLink: 'https://www.instagram.com/ps_prad_eep/',
+        linkedInLink: 'https://www.linkedin.com/in/abhishek-dabral-4884ba210?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+        instagramLink: 'https://www.instagram.com/annuragdabral?utm_source=qr&igsh=MWhoMWpnaDM0d2RuMA==',
     },
     {
         id: 2,

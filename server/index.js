@@ -25,14 +25,18 @@ cloudinaryConnect();
 // --- MIDDLEWARES (Sahi Order) ---
 
 // 1. CORS Setup (Sabse upar)
+const cors = require("cors");
+
 app.use(
     cors({
-        origin: "https://v-herbs-three.vercel.app",
+        origin: "https://v-herbs-three.vercel.app", // Aapki Vercel site ka link
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         credentials: true,
         allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
     })
 );
+
+app.options("*", cors()); // Ye line options request ko handle karne ke liye zaroori hai
 
 // Pre-flight request handle karne ke liye
 app.options("*", cors());

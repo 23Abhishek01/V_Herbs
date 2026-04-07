@@ -1,11 +1,4 @@
-// Pehle ye tha:
-// const BASE_URL = process.env.REACT_APP_BASE_URL;
-
-// Ab ise aise likho:
-const BASE_URL = "https://vherbs-backend-8r65.onrender.com/api/v1";
-
-// Baki ka poora code (authEndpoints, herbEndpoints, etc.) bilkul same rahega.
-
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 // AUTH ENDPOINTS
 export const authEndpoints = {
     SENDOTP_API : BASE_URL + "/auth/sendotp",
