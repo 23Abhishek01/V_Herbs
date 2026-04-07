@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const cors = require('cors'); // Ek hi baar kaafi hai
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const fileUpload = require('express-fileupload');
 require('dotenv').config();
@@ -22,20 +22,24 @@ dbConnect();
 // connect with cloudinary
 cloudinaryConnect();
 
-// --- MIDDLEWARES ---
+// --- MIDDLEWARES (Sahi Order) ---
 
-// 1. CORS Setup (Sahi configuration)
+
+
+
 app.use(
     cors({
-        origin: "https://v-herbs-three.vercel.app", 
+        origin: "https://v-herbs-three.vercel.app", // Aapki Vercel site ka link
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         credentials: true,
         allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
     })
 );
 
-// Pre-flight request handle karne ke liye (Sirf ek baar)
-app.options("*", cors());
+// Ye line options request ko handle karne ke liye zaroori hai
+
+// Pre-flight request handle karne ke liye
+
 
 // 2. Baki body parsers
 app.use(express.json());
