@@ -36,16 +36,17 @@ app.use(fileUpload({
     tempFileDir: '/tmp/'
 }));
 app.use(
-    cors({
-        origin: [
-            "https://v-herbs-three.vercel.app", // Aapki actual live site
-            "http://localhost:5173",            // Aapka local system (Vite)
-            "http://localhost:3000"             // Agar aap Create React App use kar rahe ho
-        ],
-        credentials: true,
-        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-        allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
-    })
+    cors({
+        origin: [
+            "https://v-herbs-three.vercel.app", 
+            /\.vercel\.app$/,                   // Ye line saare Vercel URLs ko allow kar degi
+            "http://localhost:5173",
+            "http://localhost:3000"
+        ],
+        credentials: true,
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+    })
 );
 
 // routes mapping
