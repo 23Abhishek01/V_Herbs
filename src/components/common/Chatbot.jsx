@@ -95,7 +95,7 @@ const ChatBox = ({ref, setIsComponentVisible, inputText, setInputText, chats, se
                     <p className='bg-[#ebecf1] p-2 rounded-lg max-w-[80%]'>
                         For urgent issues, you can email us at {" "}
                         <a 
-                            href='mailto:pradeep.ps2004@gmail.com'
+                            href='mailto:annuragdabral100200@gmail.com'
                             className='text-blue-200 underline decoration-1 underline-offset-2'
                         >
                             
